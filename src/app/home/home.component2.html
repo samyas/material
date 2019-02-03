@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+	<button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+	<h1>Responsive App</h1>
+  <span class="fill-remaining-space"></span>
+
+  <button aria-haspopup="true" class="ml-xs mat-icon-button" mat-icon-button="" [matMenuTriggerFor]="appMenu">
+    <span class="mat-button-wrapper">
+       <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">person</mat-icon>
+    </span>
+    <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+    <div class="mat-button-focus-overlay"></div>
+  </button>
+
+  <mat-menu #appMenu="matMenu"  [overlapTrigger]="false">
+    <button mat-menu-item>
+      <mat-icon>dialpad</mat-icon>
+      <span>Redial</span>
+    </button>
+    <button mat-menu-item disabled>
+      <mat-icon>voicemail</mat-icon>
+      <span>Check voicemail</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>notifications_off</mat-icon>
+      <span>Disable alerts</span>
+    </button>
+  </mat-menu>
+
+</mat-toolbar>
+
+<div fxLayout="row">
+	<mat-drawer-container>
+
+ 
+		<mat-drawer opened = true #snav [mode]="'side'">
+
+      <div class="sidenav-menu-outer ps ps--active-y">
+          <div class="user-block py-3" fxlayout="column" fxlayoutalign="center center">
+            <img alt="user-image" src="assets/images/users/user.jpg"><!---->
+            <h2 class="mt-2 ng-star-inserted" >Emilio Verdines</h2><!---->
+            <p class="secondary-text-color ng-star-inserted" >emilio.verdines@company.com</p>
+          </div>
+
+
+          <mat-divider></mat-divider>
+          <mat-nav-list class="sidenav-menu">
+            <mat-list-item> <mat-icon>dashboard</mat-icon><a  routerLink="./dashboard" routerLinkActive="active">Dashboard</a> </mat-list-item> 
+            <mat-list-item> <mat-icon>supervisor_account</mat-icon><a  routerLink="./students" routerLinkActive="active">Students</a> </mat-list-item> 
+            <mat-list-item> <mat-icon>computer</mat-icon><a  routerLink="./projects" routerLinkActive="active">Projects</a> </mat-list-item> 
+          </mat-nav-list>
+
+         
+        </div>
+		</mat-drawer>
+
+		<mat-drawer-content>
+      <mat-card>
+        <mat-card-content>
+      <router-outlet></router-outlet>
+  
+       <!-- Material Fab-->
+   <button mat-fab class="app-fab">
+      <mat-icon>add</mat-icon>
+  </button>
+    </mat-card-content>
+  </mat-card>
+		</mat-drawer-content>
+	</mat-drawer-container>
+</div>

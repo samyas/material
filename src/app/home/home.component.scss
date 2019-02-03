@@ -1,0 +1,74 @@
+.sidenav-container {
+    height: 100%;
+  }
+  
+  .sidenav {
+    width: 200px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  }
+  
+  .app-fab {
+    position: fixed !important;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+.user-block{  
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    max-width: 100%;
+    place-content: center;
+    align-items: center;
+
+    img {
+        border-radius: 50%;
+        width: 95px;
+        height: 95px;
+        border: 1px solid rgba(0,0,0,.12);
+    }
+        h2 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 13px;
+        }
+        
+}
+
+.secondary-text-color {
+    color: rgba(0,0,0,.54);
+}
+
+
+.user-block 
+.mt-2, .my-2 {
+    margin-top: .5rem!important;
+}
+.pb-3, .py-3 {
+    padding-bottom: 1rem!important;
+}
+
+.sidenav-menu-outer {
+    height: 100%;
+    height: calc(100% - 56px);
+}
+.ps {
+    touch-action: auto;
+    overflow: hidden!important;
+    -ms-overflow-style: none;
+    position: relative;
+}
+
+.sidenav-menu .mat-icon {
+
+    background: rgba(0,0,0,.12);
+    color: rgba(0,0,0,.54);
+    margin-right: 12px;
+    padding: 7px;
+    border-radius: 50%;
+}
+
